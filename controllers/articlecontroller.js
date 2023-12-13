@@ -5,7 +5,7 @@ const articleController = {
             const{rows} = await pg.query("SELECT * FROM articles")
             res.json({msg: "OK", data: rows})
         }catch(error){
-            res.json({msg:"NULL"})
+            res.json({msg:error.msg})
         }
     },
     getById: async(req, res) => {
