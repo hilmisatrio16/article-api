@@ -5,9 +5,9 @@ const articleController = require('../controllers/articlecontroller')
 
 router.get("/", articleController.getAll)
 router.get("/", articleController.getById)
-router.get("/", articleController.insertArticle)
-router.get("/", articleController.updateArticleById)
-router.get("/", articleController.deleteArticleById)
+router.post("/", articleController.insertArticle)
+router.put("/", articleController.updateArticleById)
+router.delete("/", articleController.deleteArticleById)
 
 module.exports = router
 
