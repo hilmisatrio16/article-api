@@ -5,7 +5,7 @@ require('dotenv').config()
 
 app.use(express.json())
 
-const articleRouter = require('./routes/router')
+const articleRouter = require('./routes/articlerouter')
 
 app.use("/api/v1/articels", articleRouter)
 
