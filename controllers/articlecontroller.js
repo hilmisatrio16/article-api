@@ -22,7 +22,7 @@ const articleController = {
         try{
             const {title, imageUrl, content} = req.body
 
-            const query = 'INSERT INTO articles(title, image, content) VALUES($1, $2) RETURNING *'
+            const query = 'INSERT INTO articles(title, image, content) VALUES($1, $2, $3) RETURNING *'
 
             const { rows } = await pg.query(query, [title, imageUrl, content])
 
